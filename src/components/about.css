@@ -1,0 +1,96 @@
+.about {
+  background-color: #0a192f;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.book {
+  width: 400px;
+  height: 500px;
+  background-color: #cfcfd4;
+
+  transform-style: preserve-3d;
+
+  transform: perspective(2000px);
+  /* perspective: 2000px; */
+  box-shadow: inset 300px 0px 30px rgba(0, 0, 0, 0.2),
+    0 10px 100px rgba(0, 0, 0, 0.3);
+
+  transition: 1s;
+}
+
+.book:hover {
+  transform: rotate(-10deg);
+  box-shadow: inset 10px 0px 30px rgba(0, 0, 0, 0.2),
+    0px 10px 100px rgba(0, 0, 0, 0.3);
+}
+
+.book::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: -5px;
+  width: 100%;
+  height: 5px;
+  background-color: #0d2a50;
+  /* transform-origin: bottom; */
+  transform: skewX(-45deg);
+}
+
+.book::after {
+  content: "";
+  position: absolute;
+  right: -5px;
+  top: -2px;
+  width: 5px;
+  height: 100%;
+  background-color: #0d2a50;
+  /* transform-origin: left; */
+  transform: skewY(-45deg);
+}
+
+.book .cover {
+  height: 100%;
+  width: 100%;
+  background-color: #3a3f5c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transform-origin: left;
+  transition: 1s;
+}
+
+.book .cover span {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  background-color: #fff;
+  font-size: 40px;
+  writing-mode: vertical-lr;
+  font-family: "Courier New", Courier, monospace;
+  padding: 5px;
+  letter-spacing: 5px;
+}
+.book:hover .cover {
+  transform: rotateY(-135deg);
+}
+
+.book .content {
+  width: 100%;
+  height: 100%;
+  background: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  font-size: 20px;
+  padding: 5px;
+  font-family: "Courier New", Courier, monospace;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
