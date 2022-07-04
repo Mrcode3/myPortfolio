@@ -1,7 +1,9 @@
 import React from "react";
 import proj1 from "../assets/proj1.png";
 import proj2 from "../assets/proj2.png";
-import inp from "../assets/inprogress.jpg";
+import proj3 from "../assets/proj3.png";
+
+// import inp from "../assets/inprogress.jpg";
 
 const Work = () => {
   return (
@@ -49,7 +51,7 @@ const Work = () => {
                 React JS Application
               </span>
               <div className="pt-8 text-center">
-                <a href="/">
+                <a href="https://zechao.netlify.app/">
                   <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
                     Demo
                   </button>
@@ -59,18 +61,18 @@ const Work = () => {
           </div>
           {/* Grid Item */}
           <div
-            style={{ backgroundImage: `url(${inp})` }}
+            style={{ backgroundImage: `url(${proj3})` }}
             className="shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div"
           >
             {/* Hover Effects */}
             <div className="opacity-0 group-hover:opacity-100 duration-300">
               <span className="text-2xl font-bold text-white tracking-wider">
-                React JS Application
+                e-commerce
               </span>
               <div className="pt-8 text-center">
-                <a href="/">
+                <a href="https://furniture-e-store.netlify.app/">
                   <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
-                    Working...
+                    Demo
                   </button>
                 </a>
               </div>
